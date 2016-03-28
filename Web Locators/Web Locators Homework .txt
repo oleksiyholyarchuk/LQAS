@@ -1,0 +1,228 @@
+
+1)
+
+Testers.Lviv.UA/testing-proffesion/
+Використовуємо пошук по id
+//Витягуємо елемент масиву з children element
+
+
+>>> parentElement=document.getElementById('comments')
+<div id="comments" class="post-comments clearfix">
+>>> parent=parentElement.children
+HTMLCollection[h1, div#comments.comments-listing, div.pagination, div.comment-form]
+>>> parent[1]
+<div id="comments" class="comments-listing">
+
+2)
+
+http://testers.lviv.ua/calendar/?ai1ec=action%3Aagenda
+//Використовуємо пошук по класу
+
+ test = document.getElementsByClassName('header-wrap')
+HTMLCollection[div.header-wrap]
+>>> childtest=test[0].children[1]
+undefined
+>>> childtest=test[0].children[0]
+<header class="site-header">
+
+3)http://testers.lviv.ua/
+//Використовуємо пошук по children і sibling
+
+
+>>> test=document.getElementById('menu-item-10')
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-10">
+>>> siblingtest=test.nextElementSibling
+<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-forum menu-item-48">
+>>> childtest=test.children
+HTMLCollection[a testers.lviv.ua, ul.sub-menu]
+newtest=childtest[1].children
+HTMLCollection[li#menu-item-14.menu-item]
+newsiblingtest=siblingtest.nextElementSibling
+<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60">
+---------------------------------------
+>>> elems = document.getElementsByClassName("grid-box-rt")
+HTMLCollection[div.grid-box-rt, div.grid-box-rt, div.grid-box-rt, div.grid-box-rt, div.grid-box-rt, div.grid-box-rt, div.grid-box-rt, div.grid-box-rt, div.grid-box-rt]
+
+>>> elems.length
+9
+
+>>> elemsChild = elems[0].children
+HTMLCollection[h3.main-page-m-catalog-i-title, ul.main-page-m-catalog-subl]
+
+>>> elemsChild = elems[0].children
+
+>>> elemChildChild = elemsChild.length
+2
+
+>>> elemChildChild = elemsChild[0]
+<h3 class="main-page-m-catalog-i-title"
+>
+>>> elemChildChild = elemsChild[0].children
+HTMLCollection[a.black /compute.../c80253/]
+
+>>> elem1 = elems[1]
+<div class="grid-box-rt"
+>
+>>> elem1 = elems[1].nextSibling
+<TextNode textContent="\n"
+>
+>>> elemSibling = elem1.nextElementSibling
+null
+
+--------------------------------------------
+>>> document.getElementById('ai1ec_style-css')
+<link id="ai1ec_style-css" media="all" type="text/css" href="http://testers.lviv.ua/?ai1ec_render_css=1400872822&ver=3.6.1" rel="stylesheet">
+>>> document.getElementsByClassName('site-wrap')
+HTMLCollection[div.site-wrap]
+>>> document.getElementById('ai1ec_style-css')
+<link id="ai1ec_style-css" media="all" type="text/css" href="http://testers.lviv.ua/?ai1ec_render_css=1400872822&ver=3.6.1" rel="stylesheet">
+>>> document.getElementsByTagName('footer')
+HTMLCollection[footer.post-footer, footer.post-footer, footer.post-footer, footer.post-footer, footer.post-footer, footer.post-footer, footer.post-footer, footer.post-footer, footer.post-footer, footer.post-footer, footer.site-footer]
+>>> document.getElementsByName('email')
+NodeList[]
+>>> document.getElementsByName('viewport')
+NodeList[meta]
+>>> a = document.getElementsByClassName(pos-top)
+ReferenceError: pos is not defined
+a = document.getElementsByClassName(pos-top)
+>>> a = document.getElementsByClassName('header-wrap')
+HTMLCollection[div.header-wrap]
+>>> aChildren=a[0].children
+HTMLCollection[header.site-header]
+>>> aChildrenChildren=aChildren.children
+undefined
+>>> aChildrenChildren=aChildren[0].children
+HTMLCollection[div.row]
+>>> aChildrenChildrenChildren=aChildrenChildren[0].children
+HTMLCollection[div.site-logo, a testers.lviv.ua, div.header-options, div.mobile-search-form, nav.header-navigation]
+>>> aChildrenChildrenChildrenGetFirstEl = aChildrenChildrenChildren[0]
+<div class="site-logo left">
+>>> aChildrenChildrenChildrenGetFirstEl.nextSibling
+<a rel="home" href="http://testers.lviv.ua/">
+>>> aChildrenChildrenChildrenGetFirstEl.nextElementSibling
+<a rel="home" href="http://testers.lviv.ua/">
+>>> parentElement = document.getElementById('menu-item-10')
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-10">
+>>> childrens = parentElement.children
+HTMLCollection[a testers.lviv.ua, ul.sub-menu]
+>>> ChildrensChildren = childrens[0].children[1]
+undefined
+>>> ChildrensChildren = childrens[0]
+<a href="http://testers.lviv.ua/">
+>>> sibling = childrensChildren.nextElementSibling
+ReferenceError: childrensChildren is not defined
+sibling = childrensChildren.nextElementSibling
+>>> sibling = ChildrensChildren.nextElementSibling
+<ul class="sub-menu">
+---------------------------------
+document.getElementById('ai1ec_style-css')
+//link[@id='ai1ec_style-css']
+css=link#ai1ec_style-css (somehow is doesn't work)
+document.getElementsByClassName('site-wrap')
+//*[contains(concat(' ', @site-wrap, ' '), ' C ')]
+div.site-wrap
+//*[@id='ai1ec_style-css' and @class='site-wrap']
+//div[@A='type']
+div[A='type']
+//*[@name='s']
+[name=s]
+//div/*[1]
+//E/preceding-sibling::*[1]
+//E2/preceding-sibling::*[1][name()='s'
+----------------------------------------
+http://www.ebay.de/
+
+1) document.getElementById('viewItmLyr')
+	<div id="viewItmLyr" class="vip">
+2) parent=document.getElementById('viewItmLyr')
+	<div id="viewItmLyr" class="vip">
+3) sibling=parent.nextElementSibling
+	<script type="text/javascript" src="http://ir.ebaystatic.com/z/e3/mggdmvoyza33hi0d2g5zvd5t5.js">
+4) childrens = parent.children
+	HTMLCollection[div.tl, div.dvid, div.errors, div.icn, div.info, div.clr, div.smlr]
+5) childrens[3]
+	<div class="icn">
+	
+	
+http://qa-school.lviv.ua/
+
+1) a=document.getElementsByClassName('wrapper grid-block')
+	HTMLCollection[div.wrapper.grid-block]
+2) children = a[0].children
+	HTMLCollection[header#header, div#block-main, footer#footer.grid-block]
+3) parent=document.getElementById('header')
+	<header id="header">
+4) sibling=parent.nextElementSibling
+	<div id="block-main">
+5) siblingNext=sibling.nextElementSibling
+	<footer id="footer" class="grid-block">
+6) siblingPrevious = siblingNext.previousSibling
+	<TextNode textContent="\n\n \n \n ">
+---------------------------------
+XPath:http://www.ebay.de/
+
+1) //*[@id='']
+	<div id="" class="main">
+2) //*[@id='']/*[1] - first child of element
+	<div id="top" class="top">
+3) //*[@id='']/*[last()] - last child
+	<div id="content" class="content">
+4) //*[@id='']/.. - parent
+	<div class="middle">
+5) ///div[contains(@class, 'middle')] - element with class name
+	<div class="middle">
+6) //div[@class='middle']/following-sibling::* - sibling 
+	[<div class="footer" tabindex="0"> <div id="viewItmLyr" class="vip"> <div id="signInToWatchTooltip" class="tooltip"> <div id="lens-modal-wrapper0" class="lens-modal-wrapper" style="z-index: 10100030;" <div class="dlg" style="width: 1112px; height: auto; display: none; border: medium none; z-index: 9999999; overflow-y: scroll;" <a id="gh-ctab" class="" href="http://ocs.ebay.de/ws/eBayISAPI.dll?ContactCS" title="Kostenloser Kontakt" _sp="m570.l2911" <a id="gh-bt" href="#" style="right: -34px;">>>>]
+7) //div[@class='middle']/preceding-sibling::*
+	[<div id="gh-gb"/> <div class="header"]
+
+CSS:http://www.ebay.de/
+
+1) .middle
+	<div class="middle">
+2) .middle>*:first-child
+	<div id="" class="main">
+3) #top>*:last-child
+	<div class="clr"/>
+4) .middle + * - following sibling
+	<div class="footer" tabindex="0">
+-----------------------------
+X_Path for mail.ru
+
+//input[@id='mailbox__login'][contains(@name,'Login')] 
+//a[contains(@data-search-href,'http://r.mail.ru')][contains(@class,'search__title')]
+//a[starts-with(@name, 'clb15')]
+//input [@type='submit'] | //div[@id=search__projects-list]
+//*[@name='viewport']
+//*[@name='clb1753672'][@href='http://my.mail.ru?from=splash']
+//a[@href='http://r.mail.ru/n139575725?sz=&test_id=107&rnd=107491203']
+//div[1]
+//div/*[last()]
+//a[contains(@href,'http://r.mail.ru/n139575725?sz=&test_id=107&rnd=886775961')]/child::node()
+//div[count(preceding-sibling::*)+count(following-sibling::*)=0]
+//div[count(../div) = 1]
+//a[text()='Новости'][ancestor::*[contains(@class,'w-x-ph__col w-x-ph__col_left')]]
+//*[contains(@class,'layout__leftcol')]//span[contains(@class,'mailbox__register__promo')]//a[contains(text(),'с удобным интерфейсом')]
+//input[@value='Войти']
+//a[contains(@href,'http://horo.mail.ru/prediction/aries/today/')]/child::node()
+//a[contains(@name,'clb3996485')][ancestor::div[contains(@class,'mailbox')]]
+-------------------
+//*[contains(@class,'ctr') and @data-jiis and preceding-sibling::span[@id] and last()]
+
+//*[@id='prt' or @class='ctr-p']
+
+//div[count(div)=1]
+
+//*[count(preceding-sibling::*)+count(following-sibling::*)=0]
+
+//div[@id='main'][@class='content']
+
+------------------------------------------------------------------------------------------
+
+[id=addlang]:nth-child(1)
+
+//a[contains(@href,'ru&source=homepage')]/preceding-sibling::*
+
+//a[contains(@href,'ru&source=homepage')]/child::node()
+
+//font[@id='addlang']/child::node()[1]
