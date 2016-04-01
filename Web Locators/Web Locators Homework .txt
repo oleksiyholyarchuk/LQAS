@@ -226,3 +226,29 @@ X_Path for mail.ru
 //a[contains(@href,'ru&source=homepage')]/child::node()
 
 //font[@id='addlang']/child::node()[1]
+----------------------------------------------------
+div.[data-jiis="cc"]
+div.[data-jiis^="c"]
+div.[data-jiis*="c"]
+div#ires
+div > a
+div + div
+a:contains('Lviv.Travel - офіційний туристичний сайт міста Львова')
+div#ires a:nth-of-type(1)
+*.warning
+div * p
+h1.opener + h2
+a[rel~="copyright"]
+span[hello="Cleveland"][goodbye="Columbus"]
+div.flyout > a
+div#action_list_body_current li:nth-of-type(2)
+#quick_search a[accesskey=p]
+#context_list_body a:contains('line')
+/html/body/div[@id='viewport']
+/html/body/div[position()=1 and 2]
+//div[@id='viewport']
+/descendant::div[@id='viewport']
+/descendant::div[@id='viewport']//descendant::a[1]
+//a[ancestor::div[@id='viewport']]
+//a[text()='Preferences'][ancestor::*[@id='header']]
+//span[ancestor::div[@id='action_list_current']][@class='next_action_name'][following-sibling::*/a[contains(@href, "contexts") and text()='Offline']]
