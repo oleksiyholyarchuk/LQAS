@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+ <test name="TestName" preserve-order="true">
+      <parameter name="usrName"  value="test"/>
+      <parameter name="pwd"  value="1234"/>
+     <classes>
+                  <class name="test.TestExample">
+                        <methods>
+                              <include name="test1" />
+                              <include name="test2" />
+                        </methods>
+                  </class>
+            </classes>
+   </test>
+</suite> 
