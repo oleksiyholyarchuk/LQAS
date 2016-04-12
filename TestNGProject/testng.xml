@@ -1,0 +1,8 @@
+<suite name="TestSuite">
+	<test name="TestNGTest">
+		<classes>
+			<class name="automationFramework.TestNG" />
+			<class name="automationFramework.TestNG2" />
+		</classes>
+	</test>
+</suite>
