@@ -1,0 +1,11 @@
+<suite name="TestSuite">
+	<test name="TestNGTest">
+		<classes>
+			<class name="singleton.GitHubTest" />
+			<class name="singleton.StackOverFlowTest" />
+			<class name="pageobject.test.NoPOMTestGitHubLogin" />
+			<class name="pageobject.test.TestGitHubLogin" />
+			<class name="pageobject.test.TestGitHubLoginWithPageFactory" />
+		</classes>
+	</test>
+</suite>
