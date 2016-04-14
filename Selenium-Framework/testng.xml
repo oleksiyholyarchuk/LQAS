@@ -6,7 +6,7 @@
 
  <test name="FirefoxTest">
  <parameter name="username" value="g-oleksiy@yandex.kz" />
- <parameter name="password" value="1957xxxx" />
+ <parameter name="password" value="********" />
  <parameter name="browser" value="firefox" />
  <parameter name="status" value="firefox" /> 
  <classes>
@@ -16,7 +16,7 @@
 
  <test name="IETest">
  <parameter name="username" value="g-oleksiy@yandex.kz" />
- <parameter name="password" value="1957xxxx" />
+ <parameter name="password" value="********" />
  <parameter name="browser" value="ie" />
  <parameter name="status" value="ie" />
  <classes>
@@ -26,7 +26,7 @@
  
 <test name="ChromeTest">
  <parameter name="username" value="g-oleksiy@yandex.kz" />
- <parameter name="password" value="1957xxxx" />
+ <parameter name="password" value="********" />
  <parameter name="browser" value="chrome" />
  <parameter name="status" value="chrome" />
  <classes>
