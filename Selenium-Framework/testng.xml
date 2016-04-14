@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" parallel="none">
+
+ <test name="FirefoxTest">
+ <parameter name="username" value="g-oleksiy@yandex.kz" />
+ <parameter name="password" value="1957xxxx" />
+ <parameter name="browser" value="firefox" />
+ <parameter name="status" value="firefox" /> 
+ <classes>
+ <class name="com.selenium.test.autoTestFacebook" />
+ </classes>
+ </test>
+
+ <test name="IETest">
+ <parameter name="username" value="g-oleksiy@yandex.kz" />
+ <parameter name="password" value="1957xxxx" />
+ <parameter name="browser" value="ie" />
+ <parameter name="status" value="ie" />
+ <classes>
+ <class name="com.selenium.test.autoTestFacebook" />
+ </classes>
+ </test>
+ 
+<test name="ChromeTest">
+ <parameter name="username" value="g-oleksiy@yandex.kz" />
+ <parameter name="password" value="1957xxxx" />
+ <parameter name="browser" value="chrome" />
+ <parameter name="status" value="chrome" />
+ <classes>
+ <class name="com.selenium.test.autoTestFacebook" />
+ </classes>
+ </test>
+</suite>
